@@ -1,8 +1,8 @@
 26. Remove Duplicates from Sorted Array
 
-Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
-Difficulty: Easy
-Topics: Array
+- Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+- Difficulty: Easy
+- Topics: Array
 
 Given an integer array nums sorted in non-decreasing (the successive element is greater than or equal to its previous element) order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
 
