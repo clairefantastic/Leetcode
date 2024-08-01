@@ -48,7 +48,7 @@ Match
 
 - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category
 
-1. Two pointer: The left pointer enable us to know where our next unique element should be place in, and also tell us how many unique value are there in the array. The right pointer will scan through the array and find the unique element. 
+1. Two pointers: The left pointer enable us to know where our next unique element should be place in, and also tell us how many unique value are there in the array. The right pointer will scan through the array and find the unique element. 
 
 Plan 
 
