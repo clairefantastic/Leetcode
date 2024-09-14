@@ -5,8 +5,8 @@
 #          otherwise return 0
 # def guess(num):
 
-class Solution(object):
-    def guessNumber(self, n):
+class Solution:
+    def guessNumber(self, n: int) -> int:
         left, right = 1, n
         
         while left <= right:
