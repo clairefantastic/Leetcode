@@ -1,37 +1,28 @@
-94. Binary Tree Inorder Traversal
+230. Kth Smallest Element in a BST
 
-- Link: https://leetcode.com/problems/binary-tree-inorder-traversal/description/
-- Difficulty: Easy
+- Link: https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
+- Difficulty: Medium
 - Topics: DFS
 
-Given the root of a binary tree, return the inorder traversal of its nodes' values.
+Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
 
 Example 1:
 
-Input: root = [1,null,2,3]
-Output: [1,3,2]
+Input: root = [3,1,4,null,2], k = 1
+Output: 1
 
 Example 2:
 
-Input: root = [1,2,3,4,5,null,8,null,null,6,7,9]
-Output: [4,2,6,5,7,1,3,9,8]
-
-Example 3:
-
-Input: root = []
-Output: []
-
-Example 4:
-
-Input: root = [1]
-Output: [1]
+Input: root = [5,3,6,2,4,null,null,1], k = 3
+Output: 3
 
 Constraints:
 
-- The number of nodes in the tree is in the range [0, 100]
-- -100 <= Node.val <= 100
+- The number of nodes in the tree is n
+- 1 <= k <= n <= 10^4
+- 0 <= Node.val <= 10^4
 
-Follow up: Recursive solution is trivial, could you do it iteratively?
+Follow up: If the BST is modified often (i.e., we can do insert and delete operations) and you need to find the kth smallest frequently, how would you optimize?
 
 UMPIRE Method:
 
@@ -42,7 +33,7 @@ Understand
 - Verify that you and the interviewer are aligned on the expected inputs and outputs.
 
 1. Any requirement on time/space complexity? 
-2. Can the tree be empty? (Yes)
+2. Can the tree be empty? 
 
 Match
 
@@ -58,13 +49,14 @@ Plan
 - Walk through a high level implementation with an existing diagram
 
 1. Iteratively: Use a stack
+    - Set n = 0
     - Initialize a current pointer (First set to root)
     - Keep go left(cur = cur.left), add to the stack when current pointer is not None
     - If current pointer is None, pop from the stack and assign to current pointer
-    - Append current pointer to the result array
-    - Go right (cur = cur.right), add to the stack when current pointer is not None
+    - n += 1
+    - If n == k, return the current pointer
+    - Else, go right (cur = cur.right), add to the stack when current pointer is not None
     - If current pointer is None, pop from the stack
-    - When the stack is empty, return the result
 2. Recursively: 
     - Initialize the empty result array
     - Define the inOrder function
@@ -73,7 +65,7 @@ Plan
         - append the value of the root to the result array
         - call inOrder(root.right)
     - call inOrder(root)
-    - return the result array
+    - return the k - 1 th element in the result array
     
 Implement
 
