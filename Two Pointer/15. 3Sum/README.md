@@ -1,8 +1,8 @@
 15. Three Sum
 
-- Link: https://leetcode.com/problems/two-sum/description/
+- Link: https://leetcode.com/problems/3sum/
 - Difficulty: Medium
-- Topics: Array, Hash map
+- Topics: Array, Sort, Two pointer 
 
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
